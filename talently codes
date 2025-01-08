@@ -1,0 +1,130 @@
+#include<stdio.h>
+int main()
+{
+    int waist_inches,hip_inches;
+    scanf("%d %d\n",&waist_inches,&hip_inches);
+    char gender;
+    scanf("%c",&gender);
+    float WHR;
+    WHR=(float)waist_inches/hip_inches;
+    switch(gender)
+    {
+    case 'm':
+        {
+            if(WHR<0.90)
+                printf("Normalweight");
+            else if(WHR>=0.90&&WHR<=0.99)
+                printf("Overweight");
+            else
+                printf("Obesity");
+            break;
+        }
+    case 'f':
+        {
+            if(WHR<0.80)
+                printf("Normalweight");
+            else if(WHR>=0.80&&WHR<=0.84)
+                printf("Overweight");
+            else
+                printf("Obesity");
+            break;
+        }
+    }
+}
+__________________________________________________________________
+'#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float hip_circumference,height,BAI;
+    char ch;
+    int age;
+    scanf("%f %f",&hip_circumference,&height);
+    scanf("%d\n",&age);
+    scanf("%c",&ch);
+    BAI=((hip_circumference/(pow(height/100,1.5)))-18);
+    if(ch=='f')
+    {
+        switch(age)
+        {
+        case 20 ... 39:
+            {
+                if(BAI<21)
+                    printf("Underweight");
+                else if(BAI>=21&&BAI<=33)
+                     printf("Healthyweight");
+                else if(BAI>=34&&BAI<=39)
+                     printf("Overweight");
+                else
+                    printf("Obesity");
+                break;
+            }
+        case 40 ... 59:
+            {
+                if(BAI<23)
+                    printf("Underweight");
+                else if(BAI>=23&&BAI<=35)
+                     printf("Healthyweight");
+                else if(BAI>=36&&BAI<=41)
+                     printf("Overweight");
+                else
+                    printf("Obesity");
+                break;
+            }
+         case 60 ... 79:
+            {
+                if(BAI<25)
+                    printf("Underweight");
+                else if(BAI>=25&&BAI<=38)
+                     printf("Healthyweight");
+                else if(BAI>=39&&BAI<=43)
+                     printf("Overweight");
+                else
+                    printf("Obesity");
+                break;
+            }
+        }
+    }
+   else if(ch=='m')
+    {
+        switch(age)
+        {
+        case 20 ... 39:
+            {
+                if(BAI<8)
+                    printf("Underweight");
+                else if(BAI>=8&&BAI<=21)
+                     printf("Healthyweight");
+                else if(BAI>=22&&BAI<=26)
+                     printf("Overweight");
+                else
+                    printf("Obesity");
+                break;
+            }
+        case 40 ... 59:
+            {
+                if(BAI<11)
+                    printf("Underweight");
+                else if(BAI>=11&&BAI<=23)
+                     printf("Healthyweight");
+                else if(BAI>=24&&BAI<=29)
+                     printf("Overweight");
+                else
+                    printf("Obesity");
+                break;
+            }
+         case 60 ... 79:
+            {
+                if(BAI<13)
+                    printf("Underweight");
+                else if(BAI>=13&&BAI<=25)
+                     printf("Healthyweight");
+                else if(BAI>=26&&BAI<=31)
+                     printf("Overweight");
+                else
+                    printf("Obesity");
+                break;
+            }
+        }
+    }
+}

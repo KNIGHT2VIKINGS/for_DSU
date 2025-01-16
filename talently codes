@@ -1,4 +1,116 @@
 #include<stdio.h>
+int main() 
+{
+long long int input;
+scanf("%lld",&input);
+for(itr=1;itr<=input;itr++)
+   printf("%lld ",itr);
+return 0;
+}
+__________________________________________________________
+#include<stdio.h>
+int main() 
+{
+long long int input,itr=1;
+scanf("%lld",&input);
+for(;itr<=input;itr+=2)
+printf("%lld ",itr);
+return 0;
+}
+____________________________________________________________
+#include<stdio.h>
+int main() 
+{
+long long int start,end,itr;
+scanf("%lld%lld",&start,&end);
+((start&1)==0)?(itr=start):(itr=start+1);
+for(;itr<=end;itr+=2)
+printf("%lld ",itr);
+return 0;
+}
+_____________________________________________________________
+#include<stdio.h>
+int main(void)
+{
+  long long int n,sum;
+  scanf("%lld",&n);
+  sum = 0;
+  for(long long int i = 1; i<= ((2*n)-1); i++)
+  {
+    if(i%2 != 0)
+    {
+      sum += i;
+    }
+  }
+  printf("%lld",sum);
+}
+__________________________________________________________________
+#include<stdio.h>
+int main(void)
+{
+  long long int n,m,sum;
+  scanf("%lld %lld",&n,&m);
+  sum = 0;
+  for(long long int i = n; i<=m ; i++)
+  {
+    if(i % 2 == 0)
+    {
+      sum += i;
+    }
+  }
+  printf("%lld",sum);
+}
+__________________________________________________
+#include<stdio.h>
+int main(void)
+{
+  long long int n,sum;
+  scanf("%lld",&n);
+  sum = 0;
+  for(long long int i = 1; i <= n; i++)
+  {
+    if(i % 3 == 0 || i % 5 ==0)
+    {
+      sum += i;
+    }
+  }
+  printf("%lld",sum);
+}
+______________________________________________________
+#include<stdio.h>
+int main(void)
+{
+  long long int n,fact;
+  scanf("%lld",&n);
+  fact = 1;
+  for ( long long int i = 1; i<=n; i++)
+  {
+    fact = fact*i;
+  }
+  printf("%lld",fact);
+}
+________________________________________________________
+#include<stdio.h>
+int main(void)
+{
+  long long int n,power;
+  scanf("%lld",&n);
+  power = 1;
+  while (power < n)
+  {
+    power *= 2;
+    if (power == n)
+    {
+      printf("YES");
+      return 0;
+    }
+  }
+  printf("NO");
+}
+_________________________________________________________________
+
+
+#include<stdio.h>
 int main()
 {
     int waist_inches,hip_inches;
